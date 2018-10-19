@@ -1,0 +1,91 @@
+# depslib dependency file v1.0
+1539953430 source:c:\users\_asus_\desktop\c++\lista2a\ccommand.cpp
+	"iostream"
+	"sstream"
+	<iostream>
+
+1539956880 source:c:\users\_asus_\desktop\c++\lista2a\cmenu.cpp
+	"iostream"
+	"sstream"
+	<iostream>
+	<vector>
+	"CMenu.h"
+	<string>
+	"CMenuCommand.h"
+	"Command1.h"
+	"Command2.h"
+
+1539955311 c:\users\_asus_\desktop\c++\lista2a\cmenu.h
+	<iostream>
+	"sstream"
+	<vector>
+	"CMenuItem.h"
+
+1539953112 c:\users\_asus_\desktop\c++\lista2a\cmenuitem.cpp
+	"iostream"
+	"sstream"
+	<iostream>
+
+1539958161 source:c:\users\_asus_\desktop\c++\lista2a\cmenucommand.cpp
+	"iostream"
+	"sstream"
+	<iostream>
+	<vector>
+	"CMenuCommand.h"
+	<string>
+
+1539953112 source:c:\users\_asus_\desktop\c++\lista2a\cmenuitem.cpp
+	"iostream"
+	"sstream"
+	<iostream>
+
+1539954735 source:c:\users\_asus_\desktop\c++\lista2a\main.cpp
+	<iostream>
+	"CMenu.h"
+
+1539955311 c:\users\_asus_\desktop\c++\lista2a\cmenucommand.h
+	<iostream>
+	"sstream"
+	<vector>
+	"CMenuItem.h"
+	"CCommand.h"
+
+1539953430 c:\users\_asus_\desktop\c++\lista2a\ccommand.cpp
+	"iostream"
+	"sstream"
+	<iostream>
+
+1539954256 source:c:\users\_asus_\desktop\c++\lista2a\command2.cpp
+	<iostream>
+	"sstream"
+	<vector>
+	"Command2.h"
+
+1539953512 source:c:\users\_asus_\desktop\c++\lista2a\command1.cpp
+	<iostream>
+	"sstream"
+	<vector>
+	"Command1.h"
+
+1539954987 c:\users\_asus_\desktop\c++\lista2a\command1.h
+	<iostream>
+	"sstream"
+	<vector>
+	"CCommand.h"
+
+1539954986 c:\users\_asus_\desktop\c++\lista2a\command2.h
+	<iostream>
+	"sstream"
+	<vector>
+	"CCommand.h"
+
+1539953430 c:\users\_asus_\desktop\c++\lista2a\ccommand.h
+	"iostream"
+	"sstream"
+	<iostream>
+
+1539953112 c:\users\_asus_\desktop\c++\lista2a\cmenuitem.h
+	"iostream"
+	"sstream"
+	<iostream>
+
