@@ -89,3 +89,211 @@
 	"sstream"
 	<iostream>
 
+1539859494 source:c:\users\_asus_\desktop\c++\projekt1\ctable.cpp
+	"CTable.h"
+	"iostream"
+	<iostream>
+	"sstream"
+
+1539859175 c:\users\_asus_\desktop\c++\projekt1\ctable.h
+	<iostream>
+	"sstream"
+
+1540066424 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenucommand.cpp
+	"iostream"
+	"sstream"
+	<iostream>
+	<vector>
+	"CMenuCommand.h"
+	<string>
+
+1539955311 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenucommand.h
+	<iostream>
+	"sstream"
+	<vector>
+	"CMenuItem.h"
+	"CCommand.h"
+
+1539953112 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenuitem.h
+	"iostream"
+	"sstream"
+	<iostream>
+
+1539953430 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ccommand.h
+	"iostream"
+	"sstream"
+	<iostream>
+
+1540067247 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenu.cpp
+	"iostream"
+	"sstream"
+	<iostream>
+	<vector>
+	"CMenu.h"
+	<string>
+	"CMenuCommand.h"
+	"Command1.h"
+	"Command2.h"
+
+1539955311 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenu.h
+	<iostream>
+	"sstream"
+	<vector>
+	"CMenuItem.h"
+
+1540068130 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command1.h
+	<iostream>
+	"sstream"
+	<vector>
+	"CCommand.h"
+	"CTableHandler.h"
+
+1540068818 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command2.h
+	<iostream>
+	"sstream"
+	<vector>
+	"CCommand.h"
+	"CTableHandler.h"
+
+1540068821 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command2.cpp
+	<iostream>
+	"sstream"
+	<vector>
+	"Command2.h"
+
+1540068130 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command1.cpp
+	<iostream>
+	"sstream"
+	<vector>
+	"Command1.h"
+
+1539954735 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\main.cpp
+	<iostream>
+	"CMenu.h"
+
+1540068130 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ctablehandler.h
+	<iostream>
+	"sstream"
+	<vector>
+	"CTable.h"
+
+1539859175 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ctable.h
+	<iostream>
+	"sstream"
+
+1539859494 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ctable.cpp
+	"CTable.h"
+	"iostream"
+	<iostream>
+	"sstream"
+
+1540068130 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ctablehandler.cpp
+	<iostream>
+	"sstream"
+	<vector>
+	"CTableHandler.h"
+
+1540069004 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command3.cpp
+	<iostream>
+	"sstream"
+	<vector>
+	"Command3.h"
+
+1540069002 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command3.h
+	<iostream>
+	"sstream"
+	<vector>
+	"CCommand.h"
+	"CTableHandler.h"
+
+1540069067 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command4.cpp
+	<iostream>
+	"sstream"
+	<vector>
+	"Command4.h"
+
+1540069065 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command4.h
+	<iostream>
+	"sstream"
+	<vector>
+	"CCommand.h"
+	"CTableHandler.h"
+
+1540069131 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command5.cpp
+	<iostream>
+	"sstream"
+	<vector>
+	"Command5.h"
+
+1540069128 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command5.h
+	<iostream>
+	"sstream"
+	<vector>
+	"CCommand.h"
+	"CTableHandler.h"
+
+1540069190 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command6.cpp
+	<iostream>
+	"sstream"
+	<vector>
+	"Command6.h"
+
+1540069189 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command6.h
+	<iostream>
+	"sstream"
+	<vector>
+	"CCommand.h"
+	"CTableHandler.h"
+
+1540069254 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command7.cpp
+	<iostream>
+	"sstream"
+	<vector>
+	"Command7.h"
+
+1540069252 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command7.h
+	<iostream>
+	"sstream"
+	<vector>
+	"CCommand.h"
+	"CTableHandler.h"
+
+1540069313 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command8.cpp
+	<iostream>
+	"sstream"
+	<vector>
+	"Command8.h"
+
+1540069312 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command8.h
+	<iostream>
+	"sstream"
+	<vector>
+	"CCommand.h"
+	"CTableHandler.h"
+
+1540069386 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command9.cpp
+	<iostream>
+	"sstream"
+	<vector>
+	"Command9.h"
+
+1540069385 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command9.h
+	<iostream>
+	"sstream"
+	<vector>
+	"CCommand.h"
+	"CTableHandler.h"
+
+1540069426 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command10.cpp
+	<iostream>
+	"sstream"
+	<vector>
+	"Command10.h"
+
+1540069430 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command10.h
+	<iostream>
+	"sstream"
+	<vector>
+	"CCommand.h"
+	"CTableHandler.h"
+

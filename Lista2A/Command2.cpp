@@ -11,6 +11,23 @@ using namespace std;
 
 
     void Command2::RunCommand(){
-        cout<<"Komenda2"<<endl;
+        cout<<"Podaj jak dluga ma byc tablica"<<endl;
+            int i_2=iGetAnyInt();
 
+            cout<<"Podaj indeks obiektu"<<endl;
+            int i_3=iGetAnyInt();
+
+            changeLengthForChosenObject(i_3,i_2);
     }
+
+
+    void Command2::changeLengthForChosenObject(int i_index,int i_newSize){
+    if(i_index>=0 && i_index<list.size()){
+        list[i_index]->changeLength(i_newSize);
+    }
+    else{
+        cout<<"Zly Indeks"<<endl;
+    }
+
+
+}

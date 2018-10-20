@@ -26,6 +26,8 @@ CMenuCommand::CMenuCommand(string s_nameG,string s_commandG,CCommand *object){
 
 CMenuCommand::~CMenuCommand(){
     delete ccommand;
+    cout<<"Usuwam CCommand z CMenuCommand"<<endl;
+
 }
 
 void CMenuCommand::toString(){
