@@ -44,8 +44,24 @@
 		<Unit filename="CTableHandler.h" />
 		<Unit filename="Command1.cpp" />
 		<Unit filename="Command1.h" />
+		<Unit filename="Command10.cpp" />
+		<Unit filename="Command10.h" />
 		<Unit filename="Command2.cpp" />
 		<Unit filename="Command2.h" />
+		<Unit filename="Command3.cpp" />
+		<Unit filename="Command3.h" />
+		<Unit filename="Command4.cpp" />
+		<Unit filename="Command4.h" />
+		<Unit filename="Command5.cpp" />
+		<Unit filename="Command5.h" />
+		<Unit filename="Command6.cpp" />
+		<Unit filename="Command6.h" />
+		<Unit filename="Command7.cpp" />
+		<Unit filename="Command7.h" />
+		<Unit filename="Command8.cpp" />
+		<Unit filename="Command8.h" />
+		<Unit filename="Command9.cpp" />
+		<Unit filename="Command9.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
