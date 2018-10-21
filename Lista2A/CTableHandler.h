@@ -3,13 +3,17 @@
 #include <vector>
 #include "CTable.h"
 #pragma once
+//#include "CMenu.h"
 using namespace std;
 
 class CTableHandler{
 public:
-    ~CTableHandler();
+    //~CTableHandler();
+    static void clean();
 protected:
+
     int iGetAnyInt();
     static vector<CTable*> list;
+
 
 };

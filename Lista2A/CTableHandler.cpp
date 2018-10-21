@@ -7,14 +7,14 @@ using namespace std;
 
 vector<CTable*> CTableHandler::list;
 
-CTableHandler::~CTableHandler(){
+/*CTableHandler::~CTableHandler(){
     for(int i=0;i<list.size();i++){
         delete list[i];
     }
 
     list.clear();
     cout<<"Usuwam CTable liste"<<endl;
-}
+} */
 
 
 int CTableHandler::iGetAnyInt()
@@ -32,5 +32,14 @@ int CTableHandler::iGetAnyInt()
     } while (!properInteger);
 
     return response;
+}
+
+void CTableHandler::clean(){
+    for(int i=0;i<list.size();i++){
+        delete list[i];
+    }
+
+    list.clear();
+    cout<<"Usuwam CTable liste"<<endl;
 }
 

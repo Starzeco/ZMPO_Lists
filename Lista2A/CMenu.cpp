@@ -15,6 +15,7 @@
 #include "Command8.h"
 #include "Command9.h"
 #include "Command10.h"
+#include "CTableHandler.h"
 
 using namespace std;
 
@@ -102,6 +103,10 @@ using namespace std;
                 if(list[i_i]->getCommand()==s_commandGiven){
                     list[i_i]->run();
                 }
+            }
+        }else{
+            if(s_name=="Menu Glowne"){
+                CTableHandler::clean();
             }
         }
        /* else{
@@ -212,11 +217,11 @@ using namespace std;
     }
 
 
-    void CMenu::addCMenu(){
+    /*void CMenu::addCMenu(){
 
     }
 
-    void CMenu::addCMenuCommand(){}
+    void CMenu::addCMenuCommand(){} */
 
   //  void CMenu::deleteM(){}
 

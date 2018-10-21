@@ -7,7 +7,7 @@ int main()
 {
     cout << "Hello world!" << endl;
 
-    CMenu menu("GLowne","xxxxx");
+    CMenu menu("Menu Glowne","xxxxx");
     menu.initializeCMenu();
     menu.run();
 

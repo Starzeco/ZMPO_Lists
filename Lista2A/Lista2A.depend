@@ -99,7 +99,7 @@
 	<iostream>
 	"sstream"
 
-1540066424 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenucommand.cpp
+1540146059 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenucommand.cpp
 	"iostream"
 	"sstream"
 	<iostream>
@@ -114,7 +114,7 @@
 	"CMenuItem.h"
 	"CCommand.h"
 
-1539953112 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenuitem.h
+1540149443 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenuitem.h
 	"iostream"
 	"sstream"
 	<iostream>
@@ -124,7 +124,7 @@
 	"sstream"
 	<iostream>
 
-1540067247 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenu.cpp
+1540148467 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenu.cpp
 	"iostream"
 	"sstream"
 	<iostream>
@@ -134,8 +134,17 @@
 	"CMenuCommand.h"
 	"Command1.h"
 	"Command2.h"
+	"Command3.h"
+	"Command4.h"
+	"Command5.h"
+	"Command6.h"
+	"Command7.h"
+	"Command8.h"
+	"Command9.h"
+	"Command10.h"
+	"CTableHandler.h"
 
-1540120551 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenu.h
+1540145784 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenu.h
 	<iostream>
 	"sstream"
 	<vector>
@@ -167,11 +176,11 @@
 	<vector>
 	"Command1.h"
 
-1540070569 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\main.cpp
+1540145321 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\main.cpp
 	<iostream>
 	"CMenu.h"
 
-1540068130 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ctablehandler.h
+1540148483 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ctablehandler.h
 	<iostream>
 	"sstream"
 	<vector>
@@ -187,7 +196,7 @@
 	<iostream>
 	"sstream"
 
-1540068130 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ctablehandler.cpp
+1540145539 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ctablehandler.cpp
 	<iostream>
 	"sstream"
 	<vector>

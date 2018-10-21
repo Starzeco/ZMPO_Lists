@@ -23,9 +23,9 @@ public:
     bool ifCommandExist();
     void run();
     void findCommandAndRun();
-    void addCMenu();
+    //void addCMenu();
   //  void ifItIsOneOfThree();
-    void addCMenuCommand();
+   // void addCMenuCommand();
   //  void deleteM();
 
     void initializeCMenu();
