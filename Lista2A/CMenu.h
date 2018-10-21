@@ -30,6 +30,8 @@ public:
 
     void initializeCMenu();
 
+
+
 private:
     std::vector<CMenuItem *>list;
     string s_commandGiven;

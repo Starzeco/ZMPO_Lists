@@ -139,43 +139,75 @@ using namespace std;
 
     }*/
 
-    void CMenu::initializeCMenu(){
-        CCommand *prob=new Command1();
-      CMenuItem *teraz=new CMenuCommand("Dodawanie","run1",prob);
 
-      list.push_back(teraz);       // Do usunięcia linijka
+    void CMenu::initializeCMenu(){
+
+
+      CCommand *prob=new Command1();
+      CMenuItem *teraz=new CMenuCommand("Dodawanie","run1",prob);
+      //list.push_back(teraz);
+
+
       CCommand *prob2=new Command2();
       CMenuItem *teraz2=new CMenuCommand("Zmiana dlugosci danej CTable","run2",prob2);
-      list.push_back(teraz2);
+      //list.push_back(teraz2);
 
       CCommand *prob3=new Command3();
       CMenuItem *teraz3=new CMenuCommand("Usun wybrany element","run3",prob3);
-      list.push_back(teraz3);
+      //list.push_back(teraz3);
 
       CCommand *prob4=new Command4();
       CMenuItem *teraz4=new CMenuCommand("Usun wszystkie CTable","run4",prob4);
-      list.push_back(teraz4);
+      //list.push_back(teraz4);
 
       CCommand *prob5=new Command5();
       CMenuItem *teraz5=new CMenuCommand("Zmien nazwe wybranego elementu","run5",prob5);
-      list.push_back(teraz5);
+      //list.push_back(teraz5);
 
       CCommand *prob6=new Command6();
       CMenuItem *teraz6=new CMenuCommand("Skopiuj wybrany element","run6",prob6);
-      list.push_back(teraz6);
+      //list.push_back(teraz6);
 
       CCommand *prob7=new Command7();
       CMenuItem *teraz7=new CMenuCommand("Wyswietl dany obiekt","run7",prob7);
-      list.push_back(teraz7);
+      //list.push_back(teraz7);
 
       CCommand *prob8=new Command8();
       CMenuItem *teraz8=new CMenuCommand("Zmien element w tablicy w CTable","run8",prob8);
-      list.push_back(teraz8);
+      //list.push_back(teraz8);
 
       CCommand *prob9=new Command9();
       CMenuItem *teraz9=new CMenuCommand("Skopiuj CTable i zmien rozmiar jego tablicy","run9",prob9);
-      list.push_back(teraz9);
+      //list.push_back(teraz9);
 
+
+
+      CMenu *menu=new CMenu("Dodawanie","menu1");
+      menu->list.push_back(teraz);
+      list.push_back(menu);
+
+
+      CMenu *menu1a=new CMenu("Kopiowanie","menu1a");
+      menu1a->list.push_back(teraz6);
+      menu1a->list.push_back(teraz9);
+      menu->list.push_back(menu1a);
+
+      CMenu *menu2=new CMenu("Usuwanie","menu2");
+      menu2->list.push_back(teraz3);
+      menu2->list.push_back(teraz4);
+      list.push_back(menu2);
+
+      CMenu *menu3=new CMenu("Zmiany","menu3");
+      CMenu *menu3a=new CMenu("Zmiany w CTable","menu3a");
+      menu3a->list.push_back(teraz2);
+      menu3a->list.push_back(teraz5);
+      menu3->list.push_back(menu3a);
+      CMenu *menu3b=new CMenu("Zmiany w tablicy CTable","menu3b");
+      menu3b->list.push_back(teraz8);
+      menu3->list.push_back(menu3b);
+      list.push_back(menu3);
+
+      list.push_back(teraz7);
 
     }
 
