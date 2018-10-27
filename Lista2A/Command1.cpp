@@ -8,7 +8,7 @@
 using namespace std;
 
 
-
+Command1::Command1(CTableHandler &handler):ListGiver(handler){}
 
     void Command1::RunCommand(){
         cout<<"Chcesz stworzyc domyslne obiekty to wpisz 1 swoje to 2"<<endl;
@@ -36,7 +36,9 @@ using namespace std;
         for(int i=0;i<i_number;i++){
               CTable *var;
               var=new CTable();
-              list.push_back(var);
+              handler->getList().push_back(var);
+              //list.push_back(var);
+
     }
     }
     else{
@@ -49,7 +51,8 @@ void Command1::createCTableObjects(int i_number,string s_nazwa,int i_length){
         for(int i=0;i<i_number;i++){
             CTable *var;
             var=new CTable(s_nazwa,i_length);
-            list.push_back(var);
+            handler->getList().push_back(var);
+            //list.push_back(var);
         }
     }
     else{

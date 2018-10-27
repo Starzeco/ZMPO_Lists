@@ -8,7 +8,7 @@
 using namespace std;
 
 
-
+Command2::Command2(CTableHandler &handler):ListGiver(handler){}
 
     void Command2::RunCommand(){
         cout<<"Podaj jak dluga ma byc tablica"<<endl;
@@ -22,8 +22,9 @@ using namespace std;
 
 
     void Command2::changeLengthForChosenObject(int i_index,int i_newSize){
-    if(i_index>=0 && i_index<list.size()){
-        list[i_index]->changeLength(i_newSize);
+    if(i_index>=0 && i_index<handler->getList().size()){
+        handler->getList().at(i_index)->changeLength(i_newSize);
+        //list[i_index]->changeLength(i_newSize);
     }
     else{
         cout<<"Zly Indeks"<<endl;

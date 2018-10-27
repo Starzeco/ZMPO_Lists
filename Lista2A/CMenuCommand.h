@@ -22,7 +22,7 @@ public:
     void toString();
     string getCommand();
     void run();
-
+    string getName();
 private:
     CCommand *ccommand;
 

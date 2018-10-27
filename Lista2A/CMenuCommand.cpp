@@ -40,7 +40,9 @@ string CMenuCommand::getCommand(){
     return s_command;
 }
 
-
+string CMenuCommand::getName(){
+    return s_name;
+}
 
 void CMenuCommand::run(){
     if(ccommand){

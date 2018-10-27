@@ -8,12 +8,12 @@ using namespace std;
 
 class CTableHandler{
 public:
-    //~CTableHandler();
-    static void clean();
-protected:
+    ~CTableHandler();
+    //static void clean();
+    vector<CTable*> &getList();
+private:
+   vector<CTable*> list;
 
-    int iGetAnyInt();
-    static vector<CTable*> list;
 
 
 };

@@ -62,6 +62,12 @@
 		<Unit filename="Command8.h" />
 		<Unit filename="Command9.cpp" />
 		<Unit filename="Command9.h" />
+		<Unit filename="Initialize.cpp" />
+		<Unit filename="Initialize.h" />
+		<Unit filename="ListGiver.cpp" />
+		<Unit filename="ListGiver.h" />
+		<Unit filename="NamesHolder.cpp" />
+		<Unit filename="NamesHolder.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

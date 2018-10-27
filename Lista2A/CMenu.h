@@ -3,12 +3,12 @@
 #include "sstream"
 #include <vector>
 #include "CMenuItem.h"
-
+#include "NamesHolder.h"
 
 using namespace std;
 
 
-class CMenu : public CMenuItem
+class CMenu : public CMenuItem,NamesHolder
 {
 public:
     //Konstruktory i destruktory
@@ -20,13 +20,15 @@ public:
 
     void toString();
     string getCommand();
+    string getName();
     bool ifCommandExist();
     void run();
     void findCommandAndRun();
-    //void addCMenu();
+    void addMenu(CMenuItem *MenuToAdd);
   //  void ifItIsOneOfThree();
    // void addCMenuCommand();
-  //  void deleteM();
+    void deleteM(string command);
+    bool ifCMenuItemExist(CMenuItem *MenuToAdd);
 
     void initializeCMenu();
 

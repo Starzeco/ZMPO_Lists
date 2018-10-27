@@ -6,6 +6,8 @@
 
 using namespace std;
 
+Command7::Command7(CTableHandler &handler):ListGiver(handler){}
+
 void Command7::RunCommand(){
         cout<<"Wybierz indeks obiektu"<<endl;
 
@@ -13,8 +15,9 @@ void Command7::RunCommand(){
     }
 
     void Command7::printOutObject(int i_index){
-    if(i_index>=0 && i_index<list.size()){
-        list[i_index]->toString();
+    if(i_index>=0 && i_index<handler->getList().size()){
+        handler->getList().at(i_index)->toString();
+        //list[i_index]->toString();
     }else{
         cout<<"Zly Indeks"<<endl;
     }

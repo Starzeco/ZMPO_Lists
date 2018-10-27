@@ -6,6 +6,8 @@
 
 using namespace std;
 
+Command8::Command8(CTableHandler &handler):ListGiver(handler){}
+
 void Command8::RunCommand(){
         cout<<"Ktory eleme1t wybierasz?"<<endl;
             int i_7=iGetAnyInt();
@@ -17,9 +19,9 @@ void Command8::RunCommand(){
     }
 
     void Command8::changeElementInCTable(int i_index,int i_indexC,int i_newValue){
-    if(i_index>=0 && i_index<list.size()){
-
-        list[i_index]->add(i_indexC,i_newValue);
+    if(i_index>=0 && i_index<handler->getList().size()){
+        handler->getList().at(i_index)->add(i_indexC,i_newValue);
+        //list[i_index]->add(i_indexC,i_newValue);
     }else{
         cout<<"Zly Indeks wektora"<<endl;
     }

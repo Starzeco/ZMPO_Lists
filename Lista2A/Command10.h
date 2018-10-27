@@ -1,12 +1,12 @@
 #include <iostream>
 #include "sstream"
 #include <vector>
-#include "CCommand.h"
+#include "ListGiver.h"
 #include "CTableHandler.h"
 
 using namespace std;
 
-class Command10:public CCommand,CTableHandler{
+class Command10:public ListGiver{
 
 public:
     void RunCommand();
