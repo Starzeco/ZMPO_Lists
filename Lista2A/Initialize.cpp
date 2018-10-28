@@ -19,7 +19,7 @@ CMenu *Initializer::initialize(CTableHandler &handlero){
     CMenu *menuGlowne=new CMenu("Menu Glowne","xxxxx");
 
     CCommand *prob=new Command1(handlero);
-      CMenuItem *teraz=new CMenuCommand("Dodawanie","run1",prob);
+      CMenuItem *teraz=new CMenuCommand("DodawanieCommand","run1",prob);
       //list.push_back(teraz);
 
 

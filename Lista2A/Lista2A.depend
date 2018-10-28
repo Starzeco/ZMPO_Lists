@@ -99,7 +99,7 @@
 	<iostream>
 	"sstream"
 
-1540653668 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenucommand.cpp
+1540650068 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenucommand.cpp
 	"iostream"
 	"sstream"
 	<iostream>
@@ -107,24 +107,24 @@
 	"CMenuCommand.h"
 	<string>
 
-1540653668 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenucommand.h
+1540650068 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenucommand.h
 	<iostream>
 	"sstream"
 	<vector>
 	"CMenuItem.h"
 	"CCommand.h"
 
-1540653668 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenuitem.h
+1540650068 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenuitem.h
 	"iostream"
 	"sstream"
 	<iostream>
 
-1539953430 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ccommand.h
+1539949830 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ccommand.h
 	"iostream"
 	"sstream"
 	<iostream>
 
-1540662020 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenu.cpp
+1540736133 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenu.cpp
 	"iostream"
 	"sstream"
 	<iostream>
@@ -145,190 +145,191 @@
 	"CTableHandler.h"
 	"NamesHolder.h"
 
-1540655128 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenu.h
+1540651528 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenu.h
 	<iostream>
 	"sstream"
 	<vector>
 	"CMenuItem.h"
 	"NamesHolder.h"
 
-1540657957 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command1.h
+1540654357 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command1.h
 	<iostream>
 	"sstream"
 	<vector>
 	"ListGiver.h"
 	"CTableHandler.h"
 
-1540658327 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command2.h
+1540654727 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command2.h
 	<iostream>
 	"sstream"
 	<vector>
 	"ListGiver.h"
 	"CTableHandler.h"
 
-1540658326 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command2.cpp
+1540654726 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command2.cpp
 	<iostream>
 	"sstream"
 	<vector>
 	"Command2.h"
 
-1540658162 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command1.cpp
+1540654562 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command1.cpp
 	<iostream>
 	"sstream"
 	<vector>
 	"Command1.h"
 
-1540657725 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\main.cpp
+1540661823 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\main.cpp
 	<iostream>
 	"CMenu.h"
+	"Initialize.h"
 
-1540659835 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ctablehandler.h
+1540656235 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ctablehandler.h
 	<iostream>
 	"sstream"
 	<vector>
 	"CTable.h"
 
-1539859175 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ctable.h
+1539855575 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ctable.h
 	<iostream>
 	"sstream"
 
-1539859494 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ctable.cpp
+1539855894 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ctable.cpp
 	"CTable.h"
 	"iostream"
 	<iostream>
 	"sstream"
 
-1540659835 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ctablehandler.cpp
+1540656235 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ctablehandler.cpp
 	<iostream>
 	"sstream"
 	<vector>
 	"CTableHandler.h"
 	"CTable.h"
 
-1540658539 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command3.cpp
+1540654939 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command3.cpp
 	<iostream>
 	"sstream"
 	<vector>
 	"Command3.h"
 
-1540658533 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command3.h
+1540654933 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command3.h
 	<iostream>
 	"sstream"
 	<vector>
 	"ListGiver.h"
 	"CTableHandler.h"
 
-1540658666 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command4.cpp
+1540655066 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command4.cpp
 	<iostream>
 	"sstream"
 	<vector>
 	"Command4.h"
 
-1540658667 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command4.h
+1540655067 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command4.h
 	<iostream>
 	"sstream"
 	<vector>
 	"ListGiver.h"
 	"CTableHandler.h"
 
-1540658787 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command5.cpp
+1540655187 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command5.cpp
 	<iostream>
 	"sstream"
 	<vector>
 	"Command5.h"
 
-1540658699 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command5.h
+1540655099 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command5.h
 	<iostream>
 	"sstream"
 	<vector>
 	"ListGiver.h"
 	"CTableHandler.h"
 
-1540658904 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command6.cpp
+1540655304 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command6.cpp
 	<iostream>
 	"sstream"
 	<vector>
 	"Command6.h"
 
-1540658818 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command6.h
+1540655218 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command6.h
 	<iostream>
 	"sstream"
 	<vector>
 	"ListGiver.h"
 	"CTableHandler.h"
 
-1540658993 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command7.cpp
+1540655393 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command7.cpp
 	<iostream>
 	"sstream"
 	<vector>
 	"Command7.h"
 
-1540658994 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command7.h
+1540655394 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command7.h
 	<iostream>
 	"sstream"
 	<vector>
 	"ListGiver.h"
 	"CTableHandler.h"
 
-1540659085 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command8.cpp
+1540655485 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command8.cpp
 	<iostream>
 	"sstream"
 	<vector>
 	"Command8.h"
 
-1540659087 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command8.h
+1540655487 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command8.h
 	<iostream>
 	"sstream"
 	<vector>
 	"ListGiver.h"
 	"CTableHandler.h"
 
-1540659203 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command9.cpp
+1540655603 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command9.cpp
 	<iostream>
 	"sstream"
 	<vector>
 	"Command9.h"
 
-1540659204 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command9.h
+1540655604 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command9.h
 	<iostream>
 	"sstream"
 	<vector>
 	"ListGiver.h"
 	"CTableHandler.h"
 
-1540069426 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command10.cpp
+1540065826 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command10.cpp
 	<iostream>
 	"sstream"
 	<vector>
 	"Command10.h"
 
-1540659232 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command10.h
+1540655632 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command10.h
 	<iostream>
 	"sstream"
 	<vector>
 	"ListGiver.h"
 	"CTableHandler.h"
 
-1540322090 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\namesholder.cpp
+1540318490 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\namesholder.cpp
 	<iostream>
 	"sstream"
 	<vector>
 	"NamesHolder.h"
 
-1540321850 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\namesholder.h
+1540318250 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\namesholder.h
 	<iostream>
 	"sstream"
 	<vector>
 
-1540658346 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\listgiver.h
+1540654746 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\listgiver.h
 	"CCommand.h"
 	"CTableHandler.h"
 
-1540660147 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\listgiver.cpp
+1540656547 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\listgiver.cpp
 	"ListGiver.h"
 	"CTableHandler.h"
 
-1540661572 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\initialize.cpp
+1540666325 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\initialize.cpp
 	"Initialize.h"
 	"CMenu.h"
 	"CMenuCommand.h"
@@ -345,7 +346,7 @@
 	"CCommand.h"
 	"CTableHandler.h"
 
-1540661428 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\initialize.h
+1540657828 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\initialize.h
 	"CMenu.h"
 	"CTableHandler.h"
 

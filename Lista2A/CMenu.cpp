@@ -45,6 +45,7 @@ using namespace std;
       for(int i=0;i<names.size();i++){
         cout<<names[i]+"-->";
       }
+      cout<<""<<endl;
       while(s_commandGiven!="back"){
         cout<<"-----------------"<<endl;
         toString();
@@ -78,8 +79,9 @@ using namespace std;
 
       names.pop_back();
       for(int is=0;is<names.size();is++){
-        cout<<names[is]+"-->"<<endl;
+        cout<<names[is]+"-->";
       }
+      cout<<""<<endl;
 
     }
 
@@ -96,9 +98,11 @@ using namespace std;
     }
 
     bool CMenu::ifCommandExist(){
-        //string s_commandGiven;
-        cin>>s_commandGiven;
-        if(s_commandGiven=="back"/* || s_commandGiven=="addm" || s_commandGiven=="addmc" || s_commandGiven=="delete"*/){
+
+        std::getline(std::cin,s_commandGiven);
+        //cin>>s_commandGiven;
+        string token=s_commandGiven.substr(0,5);
+        if(s_commandGiven=="back" || token=="help " /*|| s_commandGiven=="addmc" || s_commandGiven=="delete"*/){
             return true;
         }
         for(int i_i=0;i_i<list.size();i_i++){
@@ -110,14 +114,32 @@ using namespace std;
 
     }
 
+
     void CMenu::findCommandAndRun(){
-        if(s_commandGiven!="back" /*&& s_commandGiven!="addm" && s_commandGiven!="addmc" && s_commandGiven!="delete"*/){
+        string token=s_commandGiven.substr(0,5);
+        if(s_commandGiven!="back" && token!="help " /*&& s_commandGiven!="addmc" && s_commandGiven!="delete"*/){
             for(int i_i=0;i_i<list.size();i_i++){
                 if(list[i_i]->getCommand()==s_commandGiven){
                     list[i_i]->run();
                 }
             }
-        }/*else{
+        }else{
+            if(token=="help "){
+                string token2=s_commandGiven.substr(5,s_commandGiven.length());
+                int i_mean=0;
+                for(int i_index=0;i_index<list.size();i_index++){
+                   if(token2==list[i_index]->getCommand()){
+                        cout<<list[i_index]->getName()<<endl;
+                        i_mean=1;
+                   }
+                }
+                if(i_mean==0){
+                    cout<<"Bledna komenda"<<endl;
+                }
+
+            }
+        }
+        /*else{
             if(s_name=="Menu Glowne"){
                 CTableHandler::clean();
             }
