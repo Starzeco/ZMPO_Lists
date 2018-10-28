@@ -4,15 +4,17 @@
 #include <vector>
 #include "CMenuItem.h"
 #include "NamesHolder.h"
+#include "MenuSearch.h"
 
 using namespace std;
 
-
+class MenuSearch;
 class CMenu : public CMenuItem,NamesHolder
 {
 public:
     //Konstruktory i destruktory
-     CMenu(string s_nameG,string s_commandG);
+    CMenu(string s_nameG,string s_commandG);
+    CMenu(string s_nameG,string s_commandG,MenuSearch &menuSearchGiven);
     ~CMenu();
 
 
@@ -31,11 +33,11 @@ public:
     bool ifCMenuItemExist(CMenuItem *MenuToAdd);
 
     void initializeCMenu();
-
+    vector<CMenuItem *> getList();
 
 
 private:
     std::vector<CMenuItem *>list;
     string s_commandGiven;
-
+    MenuSearch *menuSearch;
 };

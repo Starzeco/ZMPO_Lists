@@ -17,16 +17,23 @@
 #include "Command10.h"
 #include "CTableHandler.h"
 #include "NamesHolder.h"
+//#include "MenuSearch.h"
 
 using namespace std;
 
 
-
-
-    CMenu::CMenu(string s_nameG,string s_commandG){
+     CMenu::CMenu(string s_nameG,string s_commandG){
 
         s_name=s_nameG;
         s_command=s_commandG;
+
+    }
+
+    CMenu::CMenu(string s_nameG,string s_commandG,MenuSearch &menuSearchGiven){
+
+        s_name=s_nameG;
+        s_command=s_commandG;
+        menuSearch=&menuSearchGiven;
 
     }
 
@@ -102,7 +109,8 @@ using namespace std;
         std::getline(std::cin,s_commandGiven);
         //cin>>s_commandGiven;
         string token=s_commandGiven.substr(0,5);
-        if(s_commandGiven=="back" || token=="help " /*|| s_commandGiven=="addmc" || s_commandGiven=="delete"*/){
+        string token2=s_commandGiven.substr(0,7);
+        if(s_commandGiven=="back" || token=="help " || token2=="search " /*|| s_commandGiven=="delete"*/){
             return true;
         }
         for(int i_i=0;i_i<list.size();i_i++){
@@ -117,7 +125,8 @@ using namespace std;
 
     void CMenu::findCommandAndRun(){
         string token=s_commandGiven.substr(0,5);
-        if(s_commandGiven!="back" && token!="help " /*&& s_commandGiven!="addmc" && s_commandGiven!="delete"*/){
+        string token2=s_commandGiven.substr(0,7);
+        if(s_commandGiven!="back" && token!="help " && token2!="search " /*&& s_commandGiven!="delete"*/){
             for(int i_i=0;i_i<list.size();i_i++){
                 if(list[i_i]->getCommand()==s_commandGiven){
                     list[i_i]->run();
@@ -125,10 +134,10 @@ using namespace std;
             }
         }else{
             if(token=="help "){
-                string token2=s_commandGiven.substr(5,s_commandGiven.length());
+                string tokenBack=s_commandGiven.substr(5,s_commandGiven.length());
                 int i_mean=0;
                 for(int i_index=0;i_index<list.size();i_index++){
-                   if(token2==list[i_index]->getCommand()){
+                   if(tokenBack==list[i_index]->getCommand()){
                         cout<<list[i_index]->getName()<<endl;
                         i_mean=1;
                    }
@@ -137,6 +146,12 @@ using namespace std;
                     cout<<"Bledna komenda"<<endl;
                 }
 
+            }else{
+                if(token2=="search "){
+                    string token2Back=s_commandGiven.substr(7,s_commandGiven.length());
+                    string path="";
+                    menuSearch->searchForPath(NULL,token2Back,path);
+                }
             }
         }
         /*else{
@@ -183,6 +198,9 @@ using namespace std;
         }
         return false;
 
+    }
+    vector<CMenuItem *> CMenu::getList(){
+        return list;
     }
 
   /*  void CMenu::initializeCMenu(){

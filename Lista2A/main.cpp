@@ -8,7 +8,9 @@ int main()
     //cout << "Hello world!" << endl;
     CMenu *menu;
     CTableHandler *handler=new CTableHandler();
-    menu=Initializer::initialize(*handler);
+    MenuSearch *searcher=new MenuSearch();
+    menu=Initializer::initialize(*handler,*searcher);
+
     menu->run();
     delete menu;
     delete handler;

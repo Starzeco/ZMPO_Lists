@@ -66,6 +66,8 @@
 		<Unit filename="Initialize.h" />
 		<Unit filename="ListGiver.cpp" />
 		<Unit filename="ListGiver.h" />
+		<Unit filename="MenuSearch.cpp" />
+		<Unit filename="MenuSearch.h" />
 		<Unit filename="NamesHolder.cpp" />
 		<Unit filename="NamesHolder.h" />
 		<Unit filename="main.cpp" />

@@ -6,6 +6,6 @@ using namespace std;
 class Initializer{
 
 public:
-    static CMenu *initialize(CTableHandler &handlero);
+    static CMenu *initialize(CTableHandler &handlero,MenuSearch &searcher);
 
 };

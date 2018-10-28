@@ -13,10 +13,11 @@
 #include "Command10.h"
 #include "CCommand.h"
 #include "CTableHandler.h"
+#include "MenuSearch.h"
 
-CMenu *Initializer::initialize(CTableHandler &handlero){
+CMenu *Initializer::initialize(CTableHandler &handlero,MenuSearch &searcher){
 
-    CMenu *menuGlowne=new CMenu("Menu Glowne","xxxxx");
+    CMenu *menuGlowne=new CMenu("Menu Glowne","Glowne",searcher);
 
     CCommand *prob=new Command1(handlero);
       CMenuItem *teraz=new CMenuCommand("DodawanieCommand","run1",prob);
@@ -55,33 +56,33 @@ CMenu *Initializer::initialize(CTableHandler &handlero){
       CMenuItem *teraz9=new CMenuCommand("Skopiuj CTable i zmien rozmiar jego tablicy","run9",prob9);
       //list.push_back(teraz9);
 
-      CMenu *menu=new CMenu("Dodawanie","menu1");
+      CMenu *menu=new CMenu("Dodawanie","menu1",searcher);
       menu->addMenu(teraz);
       menuGlowne->addMenu(menu);
 
 
-      CMenu *menu1a=new CMenu("Kopiowanie","menu1a");
+      CMenu *menu1a=new CMenu("Kopiowanie","menu1a",searcher);
       menu1a->addMenu(teraz6);
       menu1a->addMenu(teraz9);
       menu->addMenu(menu1a);
 
-      CMenu *menu2=new CMenu("Usuwanie","menu2");
+      CMenu *menu2=new CMenu("Usuwanie","menu2",searcher);
       menu2->addMenu(teraz3);
       menu2->addMenu(teraz4);
       menuGlowne->addMenu(menu2);
 
-      CMenu *menu3=new CMenu("Zmiany","menu3");
-      CMenu *menu3a=new CMenu("Zmiany w CTable","menu3a");
+      CMenu *menu3=new CMenu("Zmiany","menu3",searcher);
+      CMenu *menu3a=new CMenu("Zmiany w CTable","menu3a",searcher);
       menu3a->addMenu(teraz2);
       menu3a->addMenu(teraz5);
       menu3->addMenu(menu3a);
-      CMenu *menu3b=new CMenu("Zmiany w tablicy CTable","menu3b");
+      CMenu *menu3b=new CMenu("Zmiany w tablicy CTable","menu3b",searcher);
       menu3b->addMenu(teraz8);
       menu3->addMenu(menu3b);
       menuGlowne->addMenu(menu3);
 
       menuGlowne->addMenu(teraz7);
-
+      searcher.setCMenu(*menuGlowne);
       return menuGlowne;
 
 }
