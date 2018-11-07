@@ -100,21 +100,34 @@ CMenuCommand* CMenuCreater::readCMenuCommand(string cmenuCommandToRead){
 
 int CMenuCreater::findPositionOfClosingBracket(string menu){
     int openingBrackets=0;
-
-    for(int i_i=0;i_i<menu.length() && menu[i_i]!=')';i_i++){
-        if(menu[i_i]=='('){
-            openingBrackets++;
-        }
-
-    }
-    for(int i_i=0;i_i<menu.length();i_i++){
-        if(menu[i_i]==')'){
-            openingBrackets--;
-        }
-        if(openingBrackets==0){
-            return i_i;
+    if(true){
+        for(int i_i=0;i_i<menu.length();i_i++){
+            if(menu[i_i]=='('){
+                ++openingBrackets;
+            }else if(menu[i_i]==')'){
+                        --openingBrackets;
+                        if(openingBrackets==0){
+                            return i_i;
+                        }
+                }
         }
     }
+    /*if(true){
+        for(int i_i=0;i_i<menu.length() && menu[i_i]!=')';i_i++){
+            if(menu[i_i]=='('){
+                openingBrackets++;
+            }
+
+        }
+        for(int i_i=0;i_i<menu.length();i_i++){
+            if(menu[i_i]==')'){
+                openingBrackets--;
+            }
+            if(openingBrackets==0){
+                return i_i;
+            }
+        }
+    } */
     return -1;
 
 }
@@ -131,6 +144,7 @@ CMenu* CMenuCreater::createCMenuFromString(string path){
 
     while(start!=")"){
         if(start=="["){
+
             string command=path.substr(path.find("[")+1,path.find("]")-1-path.find("["));
             cmenu->addMenu(readCMenuCommand(command));
             //string newPath;
@@ -142,7 +156,7 @@ CMenu* CMenuCreater::createCMenuFromString(string path){
                         // TRZEBA ZMIENIC PATH
                         path=path.substr(path.find("]")+2,string::npos);
                     }
-                }else{
+            }else{
                     // CHYBA NIE MUSI BYC newPath=path.substr(path.find("]")+1,string::npos);
                     start=")";
                 }
@@ -174,7 +188,8 @@ CMenu* CMenuCreater::createCMenuFromString(string path){
                 string pom="";
 
                 if(newPath.substr(findPositionOfClosingBracket(newPath)-1,1)==")" /*&& findPositionOfClosingBracket(path)==findPositionOfClosingBracket(newPath)*/){   // I TO JEST TWOJE ZAMKNIECIE
-                    if(findPositionOfClosingBracket(path)==findPositionOfClosingBracket(newPath)){ // JE¯ELI closery s¹ te same
+
+                    if(findPositionOfClosingBracket(path)==findPositionOfClosingBracket(newPath)){ // JE¯ELI closery s¹ te same //  CO JEZELI S¥
                         start=newPath.substr(findPositionOfClosingBracket(newPath),1);
                     }else{
 
@@ -203,9 +218,17 @@ CMenu* CMenuCreater::createCMenuFromString(string path){
                         i++;
                     }
                 }*/
+
                 if(start==","){
+
+
                     start=newPath.substr(findPositionOfClosingBracket(newPath)+2,1);
                     if(newPath.substr(findPositionOfClosingBracket(newPath)+2,1)=="["){
+                       /* if(path==pom){
+
+                        }else{
+                           path=newPath.substr(findPositionOfClosingBracket(newPath)+2,string::npos);
+                        } */
 
                         path=newPath.substr(findPositionOfClosingBracket(newPath)+2,string::npos);
                     }
