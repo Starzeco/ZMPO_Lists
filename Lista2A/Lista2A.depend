@@ -99,7 +99,7 @@
 	<iostream>
 	"sstream"
 
-1540650068 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenucommand.cpp
+1541436438 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenucommand.cpp
 	"iostream"
 	"sstream"
 	<iostream>
@@ -107,14 +107,14 @@
 	"CMenuCommand.h"
 	<string>
 
-1540650068 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenucommand.h
+1541436438 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenucommand.h
 	<iostream>
 	"sstream"
 	<vector>
 	"CMenuItem.h"
 	"CCommand.h"
 
-1540650068 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenuitem.h
+1540809079 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenuitem.h
 	"iostream"
 	"sstream"
 	<iostream>
@@ -124,7 +124,7 @@
 	"sstream"
 	<iostream>
 
-1540750087 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenu.cpp
+1541600818 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenu.cpp
 	"iostream"
 	"sstream"
 	<iostream>
@@ -145,7 +145,7 @@
 	"CTableHandler.h"
 	"NamesHolder.h"
 
-1540750087 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenu.h
+1541537988 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenu.h
 	<iostream>
 	"sstream"
 	<vector>
@@ -173,16 +173,17 @@
 	<vector>
 	"Command2.h"
 
-1540654562 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command1.cpp
+1540807066 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\command1.cpp
 	<iostream>
 	"sstream"
 	<vector>
 	"Command1.h"
 
-1540749523 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\main.cpp
+1541600552 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\main.cpp
 	<iostream>
 	"CMenu.h"
 	"Initialize.h"
+	"CMenuCreater.h"
 
 1540656235 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\ctablehandler.h
 	<iostream>
@@ -330,7 +331,7 @@
 	"ListGiver.h"
 	"CTableHandler.h"
 
-1540750186 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\initialize.cpp
+1541436491 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\initialize.cpp
 	"Initialize.h"
 	"CMenu.h"
 	"CMenuCommand.h"
@@ -380,7 +381,21 @@
 	"NamesHolder.h"
 	"MenuSearch.h"
 
-1540751041 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\menusearch.cpp
+1540752166 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\menusearch.cpp
 	"MenuSearch.h"
 	"CMenuCommand.h"
+
+1541606816 source:c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenucreater.cpp
+	"CMenuCreater.h"
+	"CMenu.h"
+	"CMenuCommand.h"
+	<iostream>
+	<fstream>
+	<sstream>
+	<bits/stdc++.h>
+
+1541590833 c:\users\_asus_\desktop\c++\listyzmpo\lista2a\cmenucreater.h
+	"CMenu.h"
+	"CMenuCommand.h"
+	<string>
 

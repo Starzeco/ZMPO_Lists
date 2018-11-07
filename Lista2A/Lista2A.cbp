@@ -37,6 +37,8 @@
 		<Unit filename="CMenu.h" />
 		<Unit filename="CMenuCommand.cpp" />
 		<Unit filename="CMenuCommand.h" />
+		<Unit filename="CMenuCreater.cpp" />
+		<Unit filename="CMenuCreater.h" />
 		<Unit filename="CMenuItem.h" />
 		<Unit filename="CTable.cpp" />
 		<Unit filename="CTable.h" />

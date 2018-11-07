@@ -46,6 +46,30 @@ using namespace std;
         cout<<"Usuwam liste CMenu"<<endl;
     }
 
+    void CMenu::printPostOrder(){
+        for(int i_i=0;i_i<list.size();i_i++){
+            int i_ii=i_i+1;
+            cout<<i_ii<<".";
+            list[i_i]->toString();
+        }
+        for(int i_x=0;i_x<list.size();i_x++){
+            if(CMenu *next=dynamic_cast<CMenu *>(list[i_x])){
+                next->printPostOrder();
+            }
+        }
+    }
+    void CMenu::printTree(){
+        for(int i_i=0;i_i<list.size();i_i++){
+            cout<<list[i_i]->getCommand();
+        }
+        cout<<""<<endl;
+        for(int i_x=0;i_x<list.size();i_x++){
+            if(CMenu *next=dynamic_cast<CMenu *>(list[i_x])){
+                next->printTree();
+            }
+        }
+
+    }
     void CMenu::run(){
       s_commandGiven="";
       names.push_back(s_name);
@@ -53,26 +77,30 @@ using namespace std;
         cout<<names[i]+"-->";
       }
       cout<<""<<endl;
+
       while(s_commandGiven!="back"){
         cout<<"-----------------"<<endl;
         toString();
-        for(int i_i=0;i_i<list.size();i_i++){
-            //Edit chyba juz ok
 
+
+      for(int i_i=0;i_i<list.size();i_i++){
+            //Edit chyba juz okPrint();
             int i_ii=i_i+1;
             cout<<i_ii<<".";
             list[i_i]->toString();
-           /* if(i_ii==list.size()){
-                i_ii++;
-                cout<<i_ii<<".Dodaj CMenu(addm)"<<endl;
-                i_ii++;
-                cout<<i_ii<<".Dodaj CMenuCommand(addmc)"<<endl;
-                i_ii++;
-                cout<<i_ii<<".Usun CMenu/CMenuCommand(delete)"<<endl;
-
+            /*if(CMenu *next=dynamic_cast<CMenu *>(list[i_i])){
+                next->Print();
             }*/
 
         }
+        /*if(s_name=="Menu Glowne"){
+            for(int i_i3=0;i_i3<list.size();i_i3++){
+            int i_ii3=i_i3+1;
+            cout<<i_ii3<<".";
+            list[i_i3]->toString();
+        }
+        }*/
+
 
         while(!ifCommandExist()){
             cout<<"Zla komenda, podaj nowa"<<endl;
@@ -91,6 +119,7 @@ using namespace std;
       cout<<""<<endl;
 
     }
+
 
 
     void CMenu::toString(){
@@ -137,8 +166,9 @@ using namespace std;
                 string tokenBack=s_commandGiven.substr(5,s_commandGiven.length());
                 int i_mean=0;
                 for(int i_index=0;i_index<list.size();i_index++){
-                   if(tokenBack==list[i_index]->getCommand()){
-                        cout<<list[i_index]->getName()<<endl;
+                   if(tokenBack==list[i_index]->getCommand() && dynamic_cast<CMenuCommand *>(list[i_index])){
+                        CMenuCommand *temp=dynamic_cast<CMenuCommand *>(list[i_index]);
+                        cout<<temp->getDescription()<<endl;
                         i_mean=1;
                    }
                 }
@@ -154,36 +184,19 @@ using namespace std;
                 }
             }
         }
-        /*else{
-            if(s_name=="Menu Glowne"){
-                CTableHandler::clean();
-            }
-        }*/
-       /* else{
-            ifItIsOneOfThree();
-        }*/
+
 
 
     }
 
-   /* void CMenu::ifItIsOneOfThree(){
-        if(s_commandGiven=="addm"){
-            addCMenu();
-        }else{
-            if(s_commandGiven=="addmc"){
-                addCMenuCommand();      // Do zrobienia
-            }else{
-                if(s_commandGiven=="delete"){
-                    deleteM();          // Do zrobienia
-                }
-            }
-        }
-    }*/
+
 
 
    void CMenu::addMenu(CMenuItem *MenuToAdd){
         if(ifCMenuItemExist(MenuToAdd)){
+            string mom=MenuToAdd->getName();
             cout<<"Istnieje juz taki CMenuItem"<<endl;
+            cout<<mom<<endl;
         }else{
             list.push_back(MenuToAdd);
         }
@@ -203,84 +216,7 @@ using namespace std;
         return list;
     }
 
-  /*  void CMenu::initializeCMenu(){
 
-      CTableHandler *handlero=new CTableHandler();
-      CCommand *prob=new Command1(handlero);
-      CMenuItem *teraz=new CMenuCommand("Dodawanie","run1",prob);
-      //list.push_back(teraz);
-
-
-      CCommand *prob2=new Command2(handlero);
-      CMenuItem *teraz2=new CMenuCommand("Zmiana dlugosci danej CTable","run2",prob2);
-      //list.push_back(teraz2);
-
-      CCommand *prob3=new Command3(handlero);
-      CMenuItem *teraz3=new CMenuCommand("Usun wybrany element","run3",prob3);
-      //list.push_back(teraz3);
-
-      CCommand *prob4=new Command4(handlero);
-      CMenuItem *teraz4=new CMenuCommand("Usun wszystkie CTable","run4",prob4);
-      //list.push_back(teraz4);
-
-      CCommand *prob5=new Command5(handlero);
-      CMenuItem *teraz5=new CMenuCommand("Zmien nazwe wybranego elementu","run5",prob5);
-      //list.push_back(teraz5);
-
-      CCommand *prob6=new Command6(handlero);
-      CMenuItem *teraz6=new CMenuCommand("Skopiuj wybrany element","run6",prob6);
-      //list.push_back(teraz6);
-
-      CCommand *prob7=new Command7(handlero);
-      CMenuItem *teraz7=new CMenuCommand("Wyswietl dany obiekt","run7",prob7);
-      //list.push_back(teraz7);
-
-      CCommand *prob8=new Command8(handlero);
-      CMenuItem *teraz8=new CMenuCommand("Zmien element w tablicy w CTable","run8",prob8);
-      //list.push_back(teraz8);
-
-      CCommand *prob9=new Command9(handlero);
-      CMenuItem *teraz9=new CMenuCommand("Skopiuj CTable i zmien rozmiar jego tablicy","run9",prob9);
-      //list.push_back(teraz9);
-
-
-
-      CMenu *menu=new CMenu("Dodawanie","menu1");
-      menu->list.push_back(teraz);
-      list.push_back(menu);
-
-
-      CMenu *menu1a=new CMenu("Kopiowanie","menu1a");
-      menu1a->list.push_back(teraz6);
-      menu1a->list.push_back(teraz9);
-      menu->list.push_back(menu1a);
-
-      CMenu *menu2=new CMenu("Usuwanie","menu2");
-      menu2->list.push_back(teraz3);
-      menu2->list.push_back(teraz4);
-      list.push_back(menu2);
-
-      CMenu *menu3=new CMenu("Zmiany","menu3");
-      CMenu *menu3a=new CMenu("Zmiany w CTable","menu3a");
-      menu3a->list.push_back(teraz2);
-      menu3a->list.push_back(teraz5);
-      menu3->list.push_back(menu3a);
-      CMenu *menu3b=new CMenu("Zmiany w tablicy CTable","menu3b");
-      menu3b->list.push_back(teraz8);
-      menu3->list.push_back(menu3b);
-      list.push_back(menu3);
-
-      list.push_back(teraz7);
-
-    }*/
-
-
-
-    /*void CMenu::addCMenu(){
-
-    }
-
-    void CMenu::addCMenuCommand(){} */
 
     void CMenu::deleteM(string command){
         for(int i_i=0;i_i<list.size();i_i++){

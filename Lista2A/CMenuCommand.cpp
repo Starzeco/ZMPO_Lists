@@ -15,12 +15,18 @@ CMenuCommand::CMenuCommand(string s_nameG,string s_commandG){
 
 }
 
+CMenuCommand::CMenuCommand(string s_nameG,string s_commandG,string desc){
+    s_name=s_nameG;
+    s_command=s_commandG;
+    s_description=desc;
+}
 
-CMenuCommand::CMenuCommand(string s_nameG,string s_commandG,CCommand *object){
+
+CMenuCommand::CMenuCommand(string s_nameG,string s_commandG,CCommand *object,string description){
     s_name=s_nameG;
     s_command=s_commandG;
     ccommand=object;
-
+    s_description=description;
 }
 
 
@@ -38,6 +44,10 @@ void CMenuCommand::toString(){
 
 string CMenuCommand::getCommand(){
     return s_command;
+}
+
+string CMenuCommand::getDescription(){
+    return s_description;
 }
 
 string CMenuCommand::getName(){

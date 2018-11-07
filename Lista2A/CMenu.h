@@ -19,7 +19,9 @@ public:
 
 
     //Metody
+    void printPostOrder();
 
+    void printTree();
     void toString();
     string getCommand();
     string getName();

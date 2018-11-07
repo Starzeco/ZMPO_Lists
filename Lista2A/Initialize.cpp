@@ -20,40 +20,40 @@ CMenu *Initializer::initialize(CTableHandler &handlero,MenuSearch &searcher){
     CMenu *menuGlowne=new CMenu("Menu Glowne","Glowne",searcher);
 
     CCommand *prob=new Command1(handlero);
-      CMenuItem *teraz=new CMenuCommand("DodawanieCommand","run1",prob);
+      CMenuItem *teraz=new CMenuCommand("DodawanieCTable","run1",prob,"Dodaje nowe CTable do listy ");
       //list.push_back(teraz);
 
 
       CCommand *prob2=new Command2(handlero);
-      CMenuItem *teraz2=new CMenuCommand("Zmiana dlugosci danej CTable","run2",prob2);
+      CMenuItem *teraz2=new CMenuCommand("Zmiana dlugosci danej CTable","run2",prob2," Po wybraniu danego CTable mozna zmienic jej dlugosc");
       //list.push_back(teraz2);
 
       CCommand *prob3=new Command3(handlero);
-      CMenuItem *teraz3=new CMenuCommand("Usun wybrany element","run3",prob3);
+      CMenuItem *teraz3=new CMenuCommand("Usun wybrany element","run3",prob3,"Umozliwa usuniecie danego elementu");
       //list.push_back(teraz3);
 
       CCommand *prob4=new Command4(handlero);
-      CMenuItem *teraz4=new CMenuCommand("Usun wszystkie CTable","run4",prob4);
+      CMenuItem *teraz4=new CMenuCommand("Usun wszystkie CTable","run4",prob4,"Usuwa wszystkie CTable");
       //list.push_back(teraz4);
 
       CCommand *prob5=new Command5(handlero);
-      CMenuItem *teraz5=new CMenuCommand("Zmien nazwe wybranego elementu","run5",prob5);
+      CMenuItem *teraz5=new CMenuCommand("Zmien nazwe wybranego elementu","run5",prob5,"Mozna wybrac element, ktoremu zmieni sie nazwe");
       //list.push_back(teraz5);
 
       CCommand *prob6=new Command6(handlero);
-      CMenuItem *teraz6=new CMenuCommand("Skopiuj wybrany element","run6",prob6);
+      CMenuItem *teraz6=new CMenuCommand("Skopiuj wybrany element","run6",prob6,"Mozna skopiowac element i od razu dodac go");
       //list.push_back(teraz6);
 
       CCommand *prob7=new Command7(handlero);
-      CMenuItem *teraz7=new CMenuCommand("Wyswietl dany obiekt","run7",prob7);
+      CMenuItem *teraz7=new CMenuCommand("Wyswietl dany obiekt","run7",prob7,"Umozliwa wyswietlenie wybranego elementu");
       //list.push_back(teraz7);
 
       CCommand *prob8=new Command8(handlero);
-      CMenuItem *teraz8=new CMenuCommand("Zmien element w tablicy w CTable","run8",prob8);
+      CMenuItem *teraz8=new CMenuCommand("Zmien element w tablicy w CTable","run8",prob8,"Pozwala na zmiane wybranego elementu w wybranym CTable");
       //list.push_back(teraz8);
 
       CCommand *prob9=new Command9(handlero);
-      CMenuItem *teraz9=new CMenuCommand("Skopiuj CTable i zmien rozmiar jego tablicy","run9",prob9);
+      CMenuItem *teraz9=new CMenuCommand("Skopiuj CTable i zmien rozmiar jego tablicy","run9",prob9,"Mozna skopiowac CTable i automatycznie zmienic rozmiar tablicy CTable");
       //list.push_back(teraz9);
 
       CMenu *menu=new CMenu("Dodawanie","menu1",searcher);
