@@ -5,6 +5,7 @@
 #include <fstream>
 #include <sstream>
 #include <bits/stdc++.h>
+#include "MenuSearch.h"
 
 using namespace std;
 
@@ -68,13 +69,13 @@ string CMenuCreater::readFromFile(string fileName){
     return menu;
 
 }
-CMenu* CMenuCreater::readCMenu(string cmenuToRead){
+CMenu* CMenuCreater::readCMenu(string cmenuToRead,MenuSearch &searcher){
     int secondStar=cmenuToRead.find("*",1);
     string name=cmenuToRead.substr(1,secondStar-1);
     int thirdStar=cmenuToRead.find("*",secondStar+1);
     int fourthStar=cmenuToRead.find("*",thirdStar+1);
     string command=cmenuToRead.substr(thirdStar+1,fourthStar-1-thirdStar);
-    CMenu *menu=new CMenu(name,command);
+    CMenu *menu=new CMenu(name,command,searcher);
 
     return menu;
 
@@ -112,32 +113,17 @@ int CMenuCreater::findPositionOfClosingBracket(string menu){
                 }
         }
     }
-    /*if(true){
-        for(int i_i=0;i_i<menu.length() && menu[i_i]!=')';i_i++){
-            if(menu[i_i]=='('){
-                openingBrackets++;
-            }
 
-        }
-        for(int i_i=0;i_i<menu.length();i_i++){
-            if(menu[i_i]==')'){
-                openingBrackets--;
-            }
-            if(openingBrackets==0){
-                return i_i;
-            }
-        }
-    } */
     return -1;
 
 }
 
 
-CMenu* CMenuCreater::createCMenuFromString(string path){
-    //string start=path.substr(0,1);
+CMenu* CMenuCreater::createCMenuFromString(string path,MenuSearch &searcher){
+
     string start;
     string cmenuToRead=path.substr(1,path.find(";")-1);
-    CMenu *cmenu=readCMenu(cmenuToRead);
+    CMenu *cmenu=readCMenu(cmenuToRead,searcher);
 
 
     start=path.substr(path.find(";")+1,1);
@@ -147,56 +133,44 @@ CMenu* CMenuCreater::createCMenuFromString(string path){
 
             string command=path.substr(path.find("[")+1,path.find("]")-1-path.find("["));
             cmenu->addMenu(readCMenuCommand(command));
-            //string newPath;
 
-            if(/*path.find("]")+1==","*/path.substr(path.find("]")+1,1)==","){   // path.substr(path.find("]")+1,1)==","
-                    // CHYBA NIE MUSI BYC newPath=path.substr(path.find("]")+2,string::npos);
+
+            if(path.substr(path.find("]")+1,1)==","){
                     start=path.substr(path.find("]")+2,1);
                     if(start=="["){
-                        // TRZEBA ZMIENIC PATH
+
                         path=path.substr(path.find("]")+2,string::npos);
                     }
             }else{
-                    // CHYBA NIE MUSI BYC newPath=path.substr(path.find("]")+1,string::npos);
+
                     start=")";
                 }
-            //start=newPath.substr(newPath.find("]")+1,1);
-            //path=newPath;
-            /*if(start==","){
-                    start=newPath.substr(newPath.find(")")+2,1);
-                }*/
+
         }
 
         if(start=="("){
 
-           // start=path.substr(path.find(";")+1,1);
+
                 string newPath;
                 if(path.substr(path.find(";")+1,1)=="["){
                     newPath=path.substr(path.find("(",1),string::npos);
                 }else if(path.substr(path.find(";")+1,1)=="("){
                     newPath=path.substr(path.find(";")+1,string::npos);
                 }
-                //string newPath=path.substr(path.find(";")+1,string::npos);
-                //cout<<newPath<<endl;
-                /*if(path.substr(path.find(";")+1,1)=="," || path.substr(path.find(";")+1,1)==")" ){      //TU JEST CHYA niepotrzebne po ; zawsze jest nawias ( albo [
-                    newPath=path.substr(path.find(";")+3,string::npos);
-                }else{
-                    newPath=path.substr(path.find(";")+1,string::npos);
-                } */
-                //string newPath=path.substr(path.find(";")+1,npos);
-                cmenu->addMenu(createCMenuFromString(newPath));
+
+                cmenu->addMenu(createCMenuFromString(newPath,searcher));
                 string pom="";
 
-                if(newPath.substr(findPositionOfClosingBracket(newPath)-1,1)==")" /*&& findPositionOfClosingBracket(path)==findPositionOfClosingBracket(newPath)*/){   // I TO JEST TWOJE ZAMKNIECIE
+                if(newPath.substr(findPositionOfClosingBracket(newPath)-1,1)==")" ){
 
-                    if(findPositionOfClosingBracket(path)==findPositionOfClosingBracket(newPath)){ // JE¯ELI closery s¹ te same //  CO JEZELI S¥
+                    if(findPositionOfClosingBracket(path)==findPositionOfClosingBracket(newPath)){
                         start=newPath.substr(findPositionOfClosingBracket(newPath),1);
                     }else{
 
                         start=newPath.substr(findPositionOfClosingBracket(newPath)+1,1);
                         pom=newPath.substr(findPositionOfClosingBracket(newPath)+1,string::npos);
                     }
-                    //start=newPath.substr(findPositionOfClosingBracket(newPath),1);
+
 
 
                 }else{
@@ -204,36 +178,22 @@ CMenu* CMenuCreater::createCMenuFromString(string path){
                     start=newPath.substr(findPositionOfClosingBracket(newPath)+1,1);
                 }
 
-                //start=newPath.substr(findPositionOfClosingBracket(newPath)+1,1);   // TO TRZEBA Z IFOWAC
-                //start=newPath.substr(newPath.find(")")+1,1);
+
                 if(pom==""){
                     path=newPath;
                 }else{
                     path=pom;
                 }
-                //path=newPath;
-                /*if(start==")"){
-                    int i=newPath.find(")");
-                    while(newPath.find(")",i)!=-1 && newPath.substr(newPath.find(")",i),1)==")" ){
-                        i++;
-                    }
-                }*/
 
                 if(start==","){
 
 
                     start=newPath.substr(findPositionOfClosingBracket(newPath)+2,1);
                     if(newPath.substr(findPositionOfClosingBracket(newPath)+2,1)=="["){
-                       /* if(path==pom){
-
-                        }else{
-                           path=newPath.substr(findPositionOfClosingBracket(newPath)+2,string::npos);
-                        } */
 
                         path=newPath.substr(findPositionOfClosingBracket(newPath)+2,string::npos);
                     }
-                    //path=newPath.substr(findPositionOfClosingBracket(pathToFindPosition)+2,string::npos);
-                    //cmenu->addMenu(createCMenuFromString(path));
+
                 }
 
 
@@ -243,6 +203,25 @@ CMenu* CMenuCreater::createCMenuFromString(string path){
     }
 
     return cmenu;
+}
+
+
+bool CMenuCreater::validate(string menu){
+    return true;
+}
+
+
+CMenu* CMenuCreater::deserialize(MenuSearch &searcher){
+
+    if(validate(readFromFile("hej.txt"))){
+        CMenu *cmenu=createCMenuFromString(readFromFile("hej.txt"),searcher);
+        searcher.setCMenu(*cmenu);
+        return cmenu;
+    }else{
+        return NULL;
+    }
+
+
 }
 
 

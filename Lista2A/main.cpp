@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 /*
-    //cout << "Hello world!" << endl;
+
     CMenu *menu;
     CTableHandler *handler=new CTableHandler();
     MenuSearch *searcher=new MenuSearch();
@@ -26,14 +26,18 @@ int main()
     menu.initializeCMenu();
     menu.run();
     */
+    MenuSearch *searcher=new MenuSearch();
+    CMenu *menu=CMenuCreater::deserialize(*searcher);
 
-    string p=CMenuCreater::readFromFile("hej.txt");
-
-    CMenu *menu=CMenuCreater::createCMenuFromString(p);
-    //CMenu *menu=CMenuCreater::createCMenuFromString("(*name*,*komenda*;(*name2*,*komenda2*;[*name2a*,*komenda2a*,*helpo*]),(*name3*,*kom3*;[*namname*,*kom3*,*hlp3*]),[*nam*,*kom*,*hel*])");
     menu->run();
-   /* cout<<CMenuCreater::findPositionOfClosingBracket("(*name2*,*komenda2*;[*name2a*,*komenda2a*,*helpo*]),(*name3*,*kom3*;),[*nam*,*kom*,*hel*])");
-    string k="(*name2*,*komenda2*;[*name2a*,*komenda2a*,*helpo*]),(*name3*,*kom3*;)";
-    cout<<k.length();*/
+
+    delete menu;
+    delete searcher;
+    //string p=CMenuCreater::readFromFile("hej.txt");
+
+    //CMenu *menu=CMenuCreater::createCMenuFromString(p);
+    //CMenu *menu=CMenuCreater::createCMenuFromString("(*name*,*komenda*;(*name2*,*komenda2*;[*name2a*,*komenda2a*,*helpo*]),(*name3*,*kom3*;[*namname*,*kom3*,*hlp3*]))");
+    //menu->run();
+
     return 0;
 }
