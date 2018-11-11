@@ -19,7 +19,7 @@ private:
     static bool validate(string menu);
     static int findPositionOfClosingBracket(string menu);
     static CMenu* createCMenuFromString(string path,MenuSearch &searcher);
-
+    static bool ifIsEqual(char pom);
 public:
 
     static bool serialize(CMenu *cmenu);

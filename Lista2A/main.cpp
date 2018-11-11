@@ -29,7 +29,12 @@ int main()
     MenuSearch *searcher=new MenuSearch();
     CMenu *menu=CMenuCreater::deserialize(*searcher);
 
-    menu->run();
+    if(menu){
+       menu->run();
+    }else{
+        cout<<"Puste menu";
+    }
+
 
     delete menu;
     delete searcher;
