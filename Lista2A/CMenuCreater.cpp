@@ -215,6 +215,7 @@ bool CMenuCreater::validate(string menu){
             cout<<"Blad na indeksie a"<<i<<endl;
             return false;
         }
+
         if(i==menu.length()-1 && menu[i]!=')'){
            cout<<"Blad na indeksie b"<<i<<endl;
            return false;
@@ -344,9 +345,18 @@ bool CMenuCreater::validate(string menu){
                 cout<<"Po gwiazdce powinien byc srednik na indeksie "<<indexOfFourthStar+1<<endl;
                 return false;
             }
-            if(menu[indexOfFourthStar+2]!='(' && menu[indexOfFourthStar+2]!='[' && menu[indexOfFourthStar+2]!=')' ){
-                cout<<"Po indeksie "<<indexOfFourthStar+1<<" powinien byc albo ( albo [ albo )"<<endl;
-                return false;
+            if(menu[indexOfFourthStar+2]!='(' && menu[indexOfFourthStar+2]!='[' /*&& menu[indexOfFourthStar+2]!=')'*/ ){
+                int indexOfFirstO=menu.find("(",indexOfFourthStar+2);
+                int indexOfFirstK=menu.find("[",indexOfFourthStar+2);
+                if(indexOfFirstO>indexOfFirstK){
+                    cout<<"Po indeksie "<<indexOfFourthStar+1<<" powinien byc ("<<endl;
+                    return false;
+                }else{
+                    cout<<"Po indeksie "<<indexOfFourthStar+1<<" powinien byc ["<<endl;
+                    return false;
+                }
+                /*cout<<"Po indeksie "<<indexOfFourthStar+1<<" powinien byc albo ( albo [ albo )"<<endl;
+                return false; */
             }
 
             for(int p=i+indexOfThirdStar+1;p<indexOfFourthStar;p++){
@@ -358,9 +368,22 @@ bool CMenuCreater::validate(string menu){
             //KONIEC SPRAWDZANIA GWIAZDEK w MENU
             //SPRAWDZANIE ZAMKNIEC NAWIASOW OKRAGLYCH
 
+            if(i>0){
 
-           /* string strToCheckBracket=menu.substr(i,string::npos);
-            if(findPositionOfClosingBracket(strToCheckBracket)==-1){
+                string strToCheckBracket=menu.substr(i,menu.length()-i-1);
+                if(findPositionOfClosingBracket(strToCheckBracket)==-1){
+
+                    for(int ii=0;ii<strToCheckBracket.length();ii++){
+                        if(strToCheckBracket[ii]==',' && (strToCheckBracket[ii+1]=='(' || strToCheckBracket[ii+1]=='[')){
+                            cout<<"Przed przecinkiem powinien byc nawias zamykajcy ) przed indeksem "<<ii+i<<endl;
+                            return false;
+                        }
+                    }
+
+                }
+            }
+
+            /*if(findPositionOfClosingBracket(strToCheckBracket)==-1){
                 if(menu[indexOfFourthStar+3]==','){
                     cout<<"Przed przecinkiem powinien byc nawias zamykajacy przed indeksem "<<indexOfFourthStar+3<<endl;
                     return false;
@@ -563,8 +586,10 @@ bool CMenuCreater::validate(string menu){
 
 
         }
+
         if(menu[i]==','){
             if((menu[i-1]==')' || menu[i-1]==']')&& (menu[i+1]!='(' && menu[i+1]!='[')){
+
                 cout<<"Po przecinku powinien być nawias otwierajacy po indeksie "<<i<<endl;
                 return false;
             }
@@ -580,6 +605,11 @@ bool CMenuCreater::validate(string menu){
 
 
     }
+    if(findPositionOfClosingBracket(menu)==-1){
+            cout<<"Na koncu trzeba dodac nawias zamykajacy ) na idenksie "<<menu.length()<<endl;
+            return false;
+        }
+
     return true;
 }
 
